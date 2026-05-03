@@ -1,0 +1,17 @@
+# Navigation
+alias ..="cd .."
+alias ...="cd ../.."
+
+# Listing
+alias ll="ls -lah"
+alias la="ls -A"
+
+# System
+alias update="sudo pacman -Syu"
+alias install="sudo pacman -S"
+alias remove="sudo pacman -Rns"
+
+# Safety
+alias rm="rm -i"
+alias cp="cp -i"
+alias mv="mv -i"
