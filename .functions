@@ -1,0 +1,19 @@
+# Make directory and enter it
+mkcd () {
+    mkdir -p "$1"
+    cd "$1"
+}
+
+# Extract any archive easily
+extract () {
+    if [ -f "$1" ]; then
+        case "$1" in
+            *.tar.gz) tar -xzf "$1" ;;
+            *.zip) unzip "$1" ;;
+            *.rar) unrar x "$1" ;;
+            *) echo "Unknown format" ;;
+        esac
+    else
+        echo "File not found"
+    fi
+}
